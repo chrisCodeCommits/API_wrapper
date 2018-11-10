@@ -1,9 +1,19 @@
+from . import session
+
+
 
 
 class TV(object):
-    def __init__(self,id):
+
+    def __init__(self, id):
         self.id = id
-        pass
+
+
+
 
     def info(self):
-        return {'id':self.id}
+
+        path = f'https://api.themoviedb.org/3/tv/{self.id}'
+        response = session.get(path)
+
+        return response.json()
