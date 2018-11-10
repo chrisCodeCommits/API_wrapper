@@ -17,3 +17,13 @@ class TV(object):
         response = session.get(path)
 
         return response.json()
+
+
+    # geting a list of most popular movies
+    @staticmethod
+    def popular():
+
+        path = 'https://api.themoviedb.org/3/tv/popular'
+        response = session.get(path)
+
+        return response.json()
