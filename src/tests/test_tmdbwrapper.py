@@ -2,9 +2,14 @@
 from pytest import fixture
 from tmdbwrapper import TV
 
+import vcr
 
 
 
+
+@vcr.use_cassette('tests/vcr_cassettes/tv-info.yml')
+
+'''
 @fixture
 # to return test data / see line 34
 def tv_keys():
@@ -23,7 +28,7 @@ def tv_keys():
     'vote_average'
 
     ]
-
+'''
 
 
 # testing the API call
