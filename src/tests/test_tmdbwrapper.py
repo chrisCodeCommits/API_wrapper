@@ -53,7 +53,6 @@ def test_tv_info(tv_keys):
 # testing the API call to get most popular show
 def test_tv_popular():
 
-
     response = TV.popular()
 
     assert isinstance(response, dict)
